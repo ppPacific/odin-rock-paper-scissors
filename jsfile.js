@@ -1,3 +1,5 @@
+//add 5 rounds at bottom
+//last step
 const getCompChoice=()=>{
     let ans = Math.floor(Math.random() * 9)
     if (ans>=0 && ans<=2){
