@@ -18,21 +18,23 @@ const playRound=(playerSelection, computerSelection)=>{
     if (playerSelection === computerSelection){
         result = 'Tie!';
         console.log(playerSelection,computerSelection,result)
+        return result;
     } else if(playerSelection==='Rock'){
         if (computerSelection==='Scissors'){
-            result = 'You Wooonn! Rock beats Scissors';pscores++;console.log(playerSelection,computerSelection,result)
-        } else { result = 'You Loooose! Paper beats Rock';cscores++;console.log(playerSelection,computerSelection,result)}
+            result = 'You Wooonn! Rock beats Scissors';pscores++;return result;
+        } else { result = 'You Loooose! Paper beats Rock';cscores++;return result;}
     } else if(playerSelection==='Scissors'){
         if (computerSelection==='Rock'){
-            result = 'You Loooose! Rock beats Scissors';cscores++;console.log(playerSelection,computerSelection,result)
-        } else { result = 'You Wooonn! Scissors beats Paper';pscores++;console.log(playerSelection,computerSelection,result)}
+            result = 'You Loooose! Rock beats Scissors';cscores++;return result;
+        } else { result = 'You Wooonn! Scissors beats Paper';pscores++;return result;}
     }else if(playerSelection==='Paper'){
         if (computerSelection==='Rock'){
-            result = 'You Wooonn! Paper beats Rocks';pscores++;console.log(playerSelection,computerSelection,result)
-        } else { result = 'You Loooose! Scissors beats Paper';cscores++;console.log(playerSelection,computerSelection,result)}
+            result = 'You Wooonn! Paper beats Rocks';pscores++;return result;
+        } else { result = 'You Loooose! Scissors beats Paper';cscores++;return result;}
     }
 }
-playRound('Rock',getCompChoice())
+let sign = prompt('Choose Paper, Rock or Scissors');
+console.log(playRound(sign,getCompChoice()))
 
 
 // const game=(play)=>{
