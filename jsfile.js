@@ -37,8 +37,9 @@ let sign = prompt('Choose Paper, Rock or Scissors');
 console.log(playRound(sign,getCompChoice()))
 
 
-// const game=(play)=>{
-//     for (let i=0;i<5;i++) {
+ const game=()=>{
+     for (let i=0;i<5;i++) {
+            playRound(sign,getCompChoice())
 //         if (play){
 //             playRound(play,getCompChoice())
 //         } else {
@@ -46,6 +47,6 @@ console.log(playRound(sign,getCompChoice()))
 //         }
 //     }
 //
-// }
+}
 // console.log('player'+pscores,'comp'+cscores)
 // game()
