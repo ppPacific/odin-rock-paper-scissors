@@ -1,5 +1,6 @@
 //add 5 rounds at bottom
 //last step
+
 const getCompChoice=()=>{
     let ans = Math.floor(Math.random() * 9)
     if (ans>=0 && ans<=2){
@@ -21,32 +22,27 @@ const playRound=(playerSelection, computerSelection)=>{
         return result;
     } else if(playerSelection==='Rock'){
         if (computerSelection==='Scissors'){
-            result = 'You Wooonn! Rock beats Scissors';pscores++;return result;
-        } else { result = 'You Loooose! Paper beats Rock';cscores++;return result;}
+            result = 'You Wooonn! Rock beats Scissors';pscores+=pscores+1;return result;
+        } else { result = 'You Loooose! Paper beats Rock';cscores+=cscores+1;return result;}
     } else if(playerSelection==='Scissors'){
         if (computerSelection==='Rock'){
-            result = 'You Loooose! Rock beats Scissors';cscores++;return result;
-        } else { result = 'You Wooonn! Scissors beats Paper';pscores++;return result;}
+            result = 'You Loooose! Rock beats Scissors';cscores+=cscores+1;return result;
+        } else { result = 'You Wooonn! Scissors beats Paper';pscores+=pscores+1;return result;}
     }else if(playerSelection==='Paper'){
         if (computerSelection==='Rock'){
-            result = 'You Wooonn! Paper beats Rocks';pscores++;return result;
-        } else { result = 'You Loooose! Scissors beats Paper';cscores++;return result;}
+            result = 'You Wooonn! Paper beats Rocks';pscores+=pscores+1;return result;
+        } else { result = 'You Loooose! Scissors beats Paper';cscores+=cscores+1;return result;}
     }
 }
 let sign = prompt('Choose Paper, Rock or Scissors');
-console.log(playRound(sign,getCompChoice()))
+//console.log(playRound(sign,getCompChoice()))
 
 
- const game=()=>{
-     for (let i=0;i<5;i++) {
+const game=()=>{
+    for (let i=0;i<5;i++) {
             playRound(sign,getCompChoice())
-//         if (play){
-//             playRound(play,getCompChoice())
-//         } else {
-//             setTimeout(()=> {playRound('Rock',getCompChoice())},8000);
-//         }
-//     }
-//
+        console.log(pscores,cscores)
+    }
 }
-// console.log('player'+pscores,'comp'+cscores)
-// game()
+game();
+console.log('player'+pscores,'comp'+cscores)
