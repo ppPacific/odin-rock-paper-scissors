@@ -11,37 +11,53 @@ const getCompChoice=()=>{
         ans = 'Scissors';return ans
     }
 }
-//getCompChoice()
 let result = '';
 let pscores = 0;
 let cscores = 0;
 const playRound=(playerSelection, computerSelection)=>{
     if (playerSelection === computerSelection){
         result = 'Tie!';
-        console.log(playerSelection,computerSelection,result)
+        console.log(playerSelection,computerSelection,result);
         return result;
     } else if(playerSelection==='Rock'){
         if (computerSelection==='Scissors'){
-            result = 'You Wooonn! Rock beats Scissors';pscores+=pscores+1;return result;
-        } else { result = 'You Loooose! Paper beats Rock';cscores+=cscores+1;return result;}
+            result = 'You Wooonn! Rock beats Scissors';
+            pscores+=1;
+            console.log(playerSelection,computerSelection,result);
+            return result;
+        } else { result = 'You Loooose! Paper beats Rock';
+            cscores+=1;
+            console.log(playerSelection,computerSelection,result);
+            return result;}
+
     } else if(playerSelection==='Scissors'){
         if (computerSelection==='Rock'){
-            result = 'You Loooose! Rock beats Scissors';cscores+=cscores+1;return result;
-        } else { result = 'You Wooonn! Scissors beats Paper';pscores+=pscores+1;return result;}
+            result = 'You Loooose! Rock beats Scissors';
+            cscores+=1;
+            console.log(playerSelection,computerSelection,result);
+            return result;
+        } else { result = 'You Wooonn! Scissors beats Paper';
+            pscores+=1;
+            console.log(playerSelection,computerSelection,result);
+            return result;}
     }else if(playerSelection==='Paper'){
         if (computerSelection==='Rock'){
-            result = 'You Wooonn! Paper beats Rocks';pscores+=pscores+1;return result;
-        } else { result = 'You Loooose! Scissors beats Paper';cscores+=cscores+1;return result;}
+            result = 'You Wooonn! Paper beats Rocks';
+            pscores+=1;
+            console.log(playerSelection,computerSelection,result);
+            return result;
+        } else { result = 'You Loooose! Scissors beats Paper';
+            cscores+=1;
+            console.log(playerSelection,computerSelection,result);
+            return result;}
     }
 }
-let sign = prompt('Choose Paper, Rock or Scissors');
-//console.log(playRound(sign,getCompChoice()))
-
 
 const game=()=>{
     for (let i=0;i<5;i++) {
+        let sign = prompt('Choose Paper, Rock or Scissors');
             playRound(sign,getCompChoice())
-        console.log(pscores,cscores)
+        console.log(pscores,cscores,i)
     }
 }
 game();
