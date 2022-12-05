@@ -61,4 +61,11 @@ const game=()=>{
     }
 }
 game();
-console.log('player'+pscores,'comp'+cscores)
+if (pscores > cscores) {
+    console.log('You won!');
+} else if (cscores > pscores) {
+    console.log('You lost!');
+} else {
+    console.log('Tie!!!');
+}
+//console.log('player'+pscores,'comp'+cscores)
