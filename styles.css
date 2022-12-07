@@ -1,11 +1,16 @@
+body {
+    font-family: 'Fredericka the Great', cursive;
+}
 .whole {
     background-image: url("christmascard_02-1.png");
     background-size: cover;
     height: 100vh;
-   
 }
 .title {
     text-align: center;
+    font-size: 60px;
+    margin: 0;
+    padding: 10px 0 0 0;
 }
 .choices {
     text-align: center;
