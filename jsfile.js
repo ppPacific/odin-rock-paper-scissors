@@ -2,7 +2,7 @@
 //last step
 
 const getCompChoice=()=>{
-    let ans = Math.floor(Math.random() * 9)
+    let ans = Math.trunc(Math.random() * 9);
     if (ans>=0 && ans<=2){
         ans = 'Rock'; return ans
     } else if (ans>=3 && ans<=5){
