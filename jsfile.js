@@ -1,5 +1,5 @@
-//add 5 rounds at bottom
-//last step
+
+//update tmr
 
 const getCompChoice=()=>{
     let ans = Math.trunc(Math.random() * 9);
