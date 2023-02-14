@@ -1,18 +1,28 @@
 body {
-    font-family: 'Fredericka the Great', cursive;
-}
-.whole {
+    font-family: "Fredericka the Great", cursive;
+  }
+  .whole {
     background-image: url("christmascard_02-1.png");
     background-size: cover;
     height: 100vh;
-}
-.title {
+  }
+  .title {
     text-align: center;
     font-size: 60px;
     margin: 0;
     padding: 10px 0 0 0;
-}
-.choices {
+  }
+  .choices {
     text-align: center;
     padding: 28px 0 0 0;
-}
+  }
+  .result,
+  .score {
+    font-size: x-large;
+    font-weight: bolder;
+  }
+  #Rock,
+  #Paper,
+  #Scissors {
+    display: inline-block;
+  }
